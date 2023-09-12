@@ -26,7 +26,14 @@ jobs:
         run: wally-update patch        
  
       - name: install wally packages
-        run: wally install   
+        run: wally install
+ 
+      - name: Adding package directory if it's missing
+        shell: bash
+        run: |	   
+          if [ ! -d "Packages" ]; then
+          	mkdir "Packages"
+          fi
  
       - name: generate sourcemap
         run: rojo sourcemap dev.project.json --output sourcemap.json
