@@ -1,4 +1,5 @@
 --!strict
+
 -- this script is originally from https://github.com/buildthomas/MockDataStoreService to unify the mock conditions
 --[[
 
